@@ -24,7 +24,7 @@ const bigNumber=1232455667789536455454n // put n at last of number so that it wi
 // Array , Objects , Functions
 
 
- const heros =["shaktimaan" , "srk" , "sk"];
+ const heros =["shaktimaan" , "srk" , "sk"]; // array
  let myObj={   //{} --> Objects decalre in curly braces
     name:"aman",
     age1 : 20,
