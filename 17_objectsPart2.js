@@ -46,11 +46,11 @@ const users = [
 ]
 
 users[1].email
-console.log(tinderUser);
+console.log(gameApp2);
 
 console.log(Object.keys(gameApp2)); //only key  wil come  and conveted into aaray--> ['id', 'name']
 console.log(Object.values(gameApp2)); //only  value wil come  and conveted into aaray--> ['123ab', 'aman']
-console.log(Object.entries(gameApp2)); //[ ['id': '123ab'],[ 'name': 'sam'] ]
+console.log(Object.entries(gameApp2)); //[ ['id': '123ab'],[ 'name': 'aman'] ]
 
 console.log(gameApp2.hasOwnProperty('name')); //true
 console.log(gameApp2.hasOwnProperty('named')); //false
