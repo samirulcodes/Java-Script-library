@@ -8,7 +8,7 @@ console.log(typeof myDate); // o/p--> object
 // console.log(mycreatedDate.toLocaleString);
 
 // let mycreatedDate1=new Date(2024,0,23,5,5)
-// console.log(mycreatedDate1.toLocaleString); //o/p--> 1/23/2023, 5:05 AM
+// console.log(mycreatedDate1.toLocaleString); //o/p--> 1/23/2024, 5:05 AM
 
 // let mycreatedDate2=new Date("2024-01-15") //o/p-->yy-mm-dd
 // console.log(mycreatedDate2.toLocaleString); //o/p-->1/15/2024
