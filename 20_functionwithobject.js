@@ -11,7 +11,7 @@ function calculateCartprice(...num1) {// ... is rest operator
  }
 
  function handleObject(anyObject){  // taking parameter
-    console.log(`Username  is ${anyObject.name} and price is ${anyObject.price}`);   /
+    console.log(`Username  is ${anyObject.name} and price is ${anyObject.price}`);   
  }
 
 //  handleObject(user) 
