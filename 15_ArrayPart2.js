@@ -14,7 +14,7 @@ const heros2 = [...marvel, ...dc]
 
 const another_array = [1, 2, 3, [4, 5, 6], 7, [8, 9, [6, 8]]]
 const real_another_array = another_array.flat(Infinity)
-console.log(real_another_array); //o/p-->[ 2, 3, 4, 5, 6, 7, 8, 9, 6, 8 ]
+console.log(real_another_array); //o/p-->[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 6, 8 ]
 
 
 
