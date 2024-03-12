@@ -31,7 +31,7 @@ function addOne(num){
 console.log(addOne(4))
 
 
-// anotehr way to declare function 
+// anote  hr way to declare function 
 // console.log(addtwo(2)) // yha pe nhi function call nahi kar skte hai q ki addtwo() function bhi hai aur variable bhi hai isliye ye valid nhi hoga
 const addtwo=function(num){
     return num+2
