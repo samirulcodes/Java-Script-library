@@ -4,11 +4,196 @@
     <meta charset="UTF-8">
    
     <title>DOM Learning</title>
+     <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+     </style>
 </head>
-<body>
-    <div class="bg-black">
-        <h1 class="heading">DOM Learning on Chai aur Code</h1>
+<body class="bg-black">
+    <div id="title" >
+        <h1 class="heading">DOM Learning on Chai aur Code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
         <p>Lorem ipsum dolor sit amet consectetur.</p> 
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
     </div>
 </body>
 </html>
+
+
+
+<!-- how element access by id -->
+<!-- document.getElementById('title')
+<div id=​"title">​…​</div>​
+
+document.getElementById('title').id
+'title' 
+
+document.getElementById('title').class
+undefined
+
+document.getElementById('title').className
+'heading' 
+
+By Attributes
+document.getElementById('title').getAttribute('id')
+'title'
+
+document.getElementById('title').getAttribute('class')
+'heading'
+
+document.getElementById('title').setAttribute('class','test')
+undefined  but the class name is changed to "test"
+
+document.getElementById('title').setAttribute('class','test heading')
+undefined   but the class name is changed to "test heading"
+
+here  the link store in variable
+const title=document.getElementById('title')
+undefined
+title      just write title and the o/p is given below
+<div id=​"title" class=​"test heading">​…​</div>​
+
+
+title.style.backgroundColor='pink'
+'pink'
+title.style.color='black'
+'black'
+title.style.padding='10px'
+'10px'
+title.style.borderRadius='10px'
+'10px'
+
+
+How to find text content
+title.textContent
+o/p-> 'DOM Learning on Chai aur Code'
+
+title.innerHTML
+o/p-> D'OM Learning on Chai aur Code'
+
+title.innerText
+o/p->' DOM Learning on Chai aur Code'
+
+diff b/w innerText and textContent
+title.innerText -> isme jo display pe visible hoga wo hi show krega
+o/p-> 'DOM Learning on Chai aur Code'
+
+title.textContent
+o/p-> DOM Learning on Chai aur Code test text  -> isme jo actual me content likha hai hoga wo hi show krega
+
+innerHtml -> it provide the exact value
+DOM Learning on Chai aur Code <span style="display: none;">test text</span>
+
+document.getElementClassName('heading')
+o/p-> HTML collection-> aur usme sab kch hoga
+
+
+querySelector
+ocument.querySelector('h2')
+<h2>​Lorem ipsum dolor sit.​</h2>​
+
+document.querySelector('#title')
+<div id=​"title">​…​</div>​
+
+document.querySelector('.heading')
+<h1 class=​"heading">​…​</h1>​"DOM Learning on Chai aur Code "<span style=​"display:​ none;​">​test text​</span>​</h1>​
+
+input tag
+document.querySelector('input[type="password"]')
+<input type=​"password" name id fdprocessedid=​"xjm5tc">​
+
+
+ul->unordered List
+document.querySelector('ul')
+o/p->   <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+
+string UL in variable
+const myUl=document.querySelector('ul')
+
+myUl->o/p-> <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+
+
+const myUl=document.querySelector('li')
+
+myUl.querySelector('li')
+
+myUl -> o/p->
+<li>​…​</li>​
+
+const turnGreen=myUl.querySelector('li')
+
+turnGreen.style.backgroundColor="green"
+'green'
+
+
+documnet.querySelectorAll('li')
+o/p-> NodeList(3)  [li,li,li]  note-> NodeList is not an Array
+
+const temp_li_List = documnet.querySelectorAll('li')
+
+temp_li_List  o/p->NodeList(3)  [li,li,li] 
+
+
+temp_li_List[0].style.color='green'  o/p-> first element(text) of li converted into green color
+
+NodeList support forEach
+temp_li_List.forEach(function(l){
+    l.style.backgroundColor='green'
+})
+
+document.getElementByClassName('list-item')
+o/p-> HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+0: li.list-item
+1: li.list-item
+2: li.list-item
+3: li.list-item
+length: 4
+
+HTMLCollection does not support forEach loop
+
+storing in variable
+const tempList=document.getElementsByClassName('list-item')
+
+converting html collection into Array->
+Array.from(tempList)
+
+storing in variable
+const myConvertedArray=Array.from(tempList)
+
+myConvertedArray.forEach(function(li){
+    li.style.color='orange'
+})
+
+How to manipulate with other page
+
+document.querySelectorAll('.mw-headline')  -> (.class Name)
+
+storing in variable
+const h2=document.querySelectorAll('.mw-headline')
+
+h2.forEach(function(h){
+    h.style.backgroundColor='green';
+    h.style.color='orange';
+    h.style.padding='10px';
+    h.innerText="AMAN"  -> Name will be change
+})
+-->
