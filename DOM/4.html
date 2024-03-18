@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code , DOM</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li=document.createElement('li');
+        li.innerHTML=`${langName}`
+        document.querySelector('.language').append(li)
+    }
+    addLanguage("python")
+    addLanguage("java")
+
+    // doing in optimize way
+    function addOptimizeLanguage(langName){
+        const li=document.createElement('li');
+       // const addText=document.createTextNode(langName)
+        //li.appendChild(addText)
+        //li.appendChild(document.createTextNode(langName))
+        li.innerText=`${langName}`
+        document.querySelector('.language').append(li)
+    }
+    addOptimizeLanguage("ReactJs")
+
+    // EDIT ELEMENT
+    const secondLang=document.querySelector('li:nth-child(2)')
+   // secondLang.innerHTML="Ruby"
+   // Aother Way to edit element
+   const newli=document.createElement('li')
+   newli.textContent='nextjs'
+   secondLang.replaceWith(newli)
+
+   const firstLang=document.querySelector('li:first-child')
+   firstLang.outerHTML='<li>TypeScript</li>'
+   
+   const lastLang=document.querySelector('li:last-child')
+   lastLang.innerHTML="python"
+
+   // REMOVE ELEMENT
+   const Lang1=document.querySelector('li:last-child')
+   Lang1.remove()
+
+   const Lang2=document.querySelector('li:nth-child(2)')
+   Lang2.remove()
+
+
+
+
+</script>
+</html>
