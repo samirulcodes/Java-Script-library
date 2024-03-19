@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        .container1{
+           text-decoration: none;
+        }
+        .btn {
+            margin: 0px 8px;
+            background-color: rgb(12, 12, 12);
+            color: rgb(234, 143, 192);
+            padding: 4px 12px;
+            border: 2px solid rgb(224, 159, 159);
+            border-radius: 8px;
+        }
+        .container2{
+            background-color: grey;
+            border: 2px solid black;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 2px;
+        }
+        .button{
+            margin: 0px 8px;
+            background-color: rgb(12, 12, 12);
+            color: white;
+            padding: 4px 12px;
+            border: 2px solid rgb(224, 159, 159);
+            border-radius: 8px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container1">
+    <button class="btn">Home</button>
+    <a href="">
+        <button class="btn">YouTube Channel</button>
+    </a>
+</div>
+    <hr>
+    <div class="container2">
+        <h1>BMI Calculator</h1>
+        <form >
+           
+          <p> <label >Height in cm: </label><input type="text" id="height"></p> <br>
+
+          <p> <label >Weight in KG: </label><input type="text" id="weight"></p>  
+
+         <button class="button">Calculate</button>
+        
+         <div id="results"></div>
+         <div id="height-guide">
+            <h3>BMI Weight Guide</h3>
+            <p>Under weight=less than 18.6</p>
+            <p>Normal Range =18.6 and 24.9</p>
+            <p>Overweight = Greater than 24.9</p>
+         </div>
+        </form>
+    </div>
+</body>
+<script src="basic.js"></script>
+</html>
