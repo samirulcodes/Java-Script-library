@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        .btn {
+            margin: 0px 8px;
+            background-color: rgb(0, 35, 25);
+            color: rgb(231, 0, 123);
+            padding: 4px 12px;
+            border: 2px solid rgb(218, 25, 169);
+            border-radius: 8px;
+            font-size: 15px;
+            font-style: italic;
+        }
+
+        .center{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #clock{
+            font-size: 40px;
+            background-color: rgb(178, 212, 140);
+            padding: 20px 50px;
+            border-radius: 10px;
+            margin-top: 10px;
+            border: 2px solid rgb(12, 171, 234);
+        }
+        #banner{
+            font-size: 40px;
+            color: aqua;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <button class="btn">Home</button>
+    <a href="">
+        <button class="btn">YouTube Channel</button>
+    </a>
+    </nav>
+    <div class="center">
+        <div id="banner">Digital Clock</div>
+        <div id="clock"></div>
+    </div>
+    <script src="clock.js"></script>
+</body>
+
+</html>
