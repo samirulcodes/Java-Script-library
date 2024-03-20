@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            margin: 0px 8px;
+            background-color: rgb(12, 12, 12);
+            color: rgb(234, 143, 192);
+            padding: 4px 12px;
+            border: 2px solid rgb(224, 159, 159);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body style="background-color: black; color:white">
+    <nav>
+        <a href="/" aria-current="page">
+            <button class="btn">Home</button>
+        </a>
+
+        <a target="_blank" href="https://youtube.com/@chaiaurcode?si=3YPSNHlmkcSnQXpX ">
+            <button class="btn">Youtube channel</button>
+        </a>
+    </nav>
+    <div id="wrapper">
+        <h1>Number Guessing Game</h1>
+        <p>Try and guess the random number between 1 to 100</p>
+        <p>You have 10 attempts to guess the number</p>
+        <br>
+        <form action="" class="form">
+            <label for="guessField" id="guess">Guess a number</label>
+            <input type="text" id="guessField" class="guessField">
+            <input type="submit" id="subt" value="submit guess" class="guessSubmit">
+        </form>
+
+        <div class="resultParas">
+            <p>Previous Guess: <span class="guesses"></span></p>
+            <p>Guess Remaining: <span class="lastResult">10</span></p>
+            <p class="lowOrHi"></p>
+        </div>
+    </div>
+
+    <script src="basic.js"></script>
+</body>
+</html>
