@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="photoshop"></li>
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <!--   1st approach -> onclick('owl') -->
+            <li><img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // 2nd approach
+    //document.getElementById('owl').onclick=function(){
+    //  alert("owl clicked")
+    //}
+    // attachEvent()
+    //jQuery - on->(on is event in jQuery)
+    // What to study more
+    // type, timestamp, defaultPrevented
+    //target, toElement, SrcElement, currentTarget
+    // Interview-> clientX, clientY,screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // 3rd and best approach
+    // document.getElementById('owl').addEventListener//('click',function(e){
+    //     console.log(e)
+    // },false)    //3rd parameter is false by default-> document.getElementById('owl').addEventListener('click',function(){},false)
+
+
+    //  document.getElementById('images').addEventListener//('click', function (e) {
+    // console.log("Clicked inside the ul")
+    //  }, false)
+    // click on any img except owl its o/p will be -> Clicked inside the ul
+
+    // document.getElementById('owl').addEventListener//('click', function (e) {
+    //     console.log("Owl Clicked ")
+    //     e.stopPropagation() // iska o/p only owl clicked ayega and it will not move up to print clicked inside the ul because of stop propagation
+    // }, false)
+    // click on owl aimg then its o/p will be ->1.Owl Clicked and then 2.clicked inside the ul
+
+    //false-> bubbling and it follow bottom-top approach
+    //true->capturing and it follow top-bottom approach
+
+    // document.getElementById('google').addEventListener//('click', function (e) {
+    //     e.preventDefault()
+    //    e.stopPropagation()//
+    //    console.log("Google clicked")
+    // }, false)
+    //preventDefault() -> ye driect google pe click krne se open nhi hoga
+    //stopPropagation()-->only Google clicked will print
+
+
+   // How to remove images when clicked
+
+   document.querySelector('#images').addEventListener('click',function(e){
+   //console.log(e.target.parentNode)
+   // console.log(e.target.tagName)
+    if(e.target.tagName==='IMG'){
+        let removeIt=e.target.parentNode
+        removeIt.remove()
+    }
+   })
+
+   // another method to remove -> removeIt.parentNode.removeChild(removeIt)
+</script>
+<script>
