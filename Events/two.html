@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // 1st approach
+   // setTimeout(function () {
+   //     console.log("Aman")
+   // }, 2000) // 2000ms= 2 second and it will print after 2 sec and print only once -->
+
+   // 2nd Approach
+    const sayAman = function () {
+        console.log("Aman")
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML="Best JS Series"
+    } // chai aur code se Best JS Series name change after 2 sec
+
+   const changeMe= setTimeout(changeText, 2000)
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    }) 
+    // clearTimeout()--> chai aur code name change hoga best js series lekin 2 sec k baad change hoga too name change hone se pehele stop button pe click kr diye too name chage nhi hoga aur chai aur code hi name reh jayega
+    
+</script>
+
+</html>
