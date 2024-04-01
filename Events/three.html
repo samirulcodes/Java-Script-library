@@ -14,27 +14,28 @@
    
 </body>
 <script>
-    // START BUTTON(NOT WORKING PROPERLY)
-
+    // START BUTTON
+    let timeInterval
     const sayTime=function(str){
         console.log(str,Date.now())
     }
-    const timeInterval=setInterval(sayTime,1000,"hello")
-    
+
     document.querySelector('#start').addEventListener('click',function(){
-        clearInterval(timeInterval)
-        console.log("START")
+        timeInterval=setInterval(sayTime,1000,"hello")
     })
+   
     
- // STOP BUTTON(NOT WORKING PROPERLY)
+    
+   
+    
+ // STOP BUTTON
 
    const sayDate=function(str){
     console.log(str,Date.now())
    }
-  const IntervalId= setInterval(sayDate,1000,"hiii") // it will continously print after 1 second
-
+ 
   document.querySelector('#stop').addEventListener('click',function(){
-    clearInterval(IntervalId) // nothing will be print , everythimg will be clear
+    clearInterval(timeInterval) // stop printing  
     console.log("STOPPED")
 }) 
 
