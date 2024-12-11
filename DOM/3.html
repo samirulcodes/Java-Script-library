@@ -13,15 +13,15 @@
     console.log(div)
     div.className="main" // create class=main
     div.id=Math.round(Math.random() * 10 + 1) // create id = random no.
-    div.setAttribute("title","generated title")
+    div.setAttribute("title","generated title") // "key", "value"
     div.style.backgroundColor='green'
     div.style.padding='10px'
 
-    //div.innerText="Chai aur Code"
-    const addText=document.createTextNode("Chai aur Code")
-    div.appendChild(addText) // do either line no. 20 or 21 both are same
+    div.innerText="Samirul Islam"
+    //const addText=document.createTextNode("Chai aur Code")
+    //div.appendChild(addText) // do either line no. 20 or 21 both are same
 
-    //attaching element into screen
+    //attaching element into screen(means whatever element create it will display in web page)
     document.body.appendChild(div)
 </script>
 </html>
